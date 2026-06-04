@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profit Pulse – Best Deals Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="logo-box">
+        <img
+          src="https://copilot.microsoft.com/th/id/BCO.5b440c2b-fc81-41a1-a5ba-b90a0864ce2f.png"
+          alt="Profit Pulse Logo"
+        />
+        <span>Profit Pulse</span>
+      </div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#deals">Deals</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#hero" onclick="closeMobile()">Home</a>
+      <a href="#deals" onclick="closeMobile()">Deals</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-content reveal">
+        <div class="hero-badge">🔥 Trending Deals Today</div>
+        <h1>
+          Find The <span class="highlight">Best Deals</span><br />In Seconds
+        </h1>
+        <p>
+          Stop wasting hours comparing products. Profit Pulse finds the best
+          discounts from Amazon, Flipkart and other trusted online stores —
+          instantly.
+        </p>
+        <div class="hero-actions">
+          <a href="#deals" class="btn btn-primary"
+            >Explore Deals <span class="arrow">→</span></a
+          >
+          <a href="#deals" class="btn btn-ghost">See Featured ↓</a>
+        </div>
+        <div class="hero-trust">
+          <span>✅ Free</span>
+          <span>✅ No Sign-up</span>
+          <span>✅ Updated Daily</span>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal-right">
+        <div class="hero-img-glow"></div>
+        <img src="image.png" alt="Shopping Deals" class="hero-img" />
+        <div class="floating-badge badge-1">💸 Save Up To 83%</div>
+        <div class="floating-badge badge-2">⚡ Live Deals</div>
+      </div>
+    </header>
+
+    <!-- MARQUEE TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>🔥 boAt Airdopes – 83% OFF</span>
+        <span>⚡ Curtains – ₹849 only</span>
+        <span>💻 Study Desk – 50% OFF</span>
+        <span>🎧 Earbuds from ₹999</span>
+        <span>🛒 Free Shipping on 500+</span>
+        <span>🔥 Flash Sale – 6 PM Today</span>
+        <span>💰 Cashback on Flipkart</span>
+        <span>🔥 boAt Airdopes – 83% OFF</span>
+        <span>⚡ Curtains – ₹849 only</span>
+        <span>💻 Study Desk – 50% OFF</span>
+        <span>🎧 Earbuds from ₹999</span>
+        <span>🛒 Free Shipping on 500+</span>
+        <span>🔥 Flash Sale – 6 PM Today</span>
+        <span>💰 Cashback on Flipkart</span>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="card reveal">
+        <div class="card-icon">😤</div>
+        <h2 class="counter-num" data-target="81">0</h2>
+        <span class="card-suffix">%</span>
+        <p>People struggle finding the best deals online</p>
+      </div>
+      <div class="card reveal" style="--delay: 0.15s">
+        <div class="card-icon">⏰</div>
+        <h2 class="counter-num" data-target="124">0</h2>
+        <span class="card-suffix"> hrs</span>
+        <p>Average yearly online shopping time wasted</p>
+      </div>
+      <div class="card reveal" style="--delay: 0.3s">
+        <div class="card-icon">🎉</div>
+        <h2 class="counter-num" data-target="100">0</h2>
+        <span class="card-suffix">%</span>
+        <p>Free to use, always — no hidden charges</p>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+      <div class="section-label reveal">Why Choose Us</div>
+      <h2 class="reveal">
+        Why Use <span class="highlight">Profit Pulse?</span>
+      </h2>
+      <div class="benefit-grid">
+        <div class="benefit reveal" style="--delay: 0s">
+          <span class="b-icon">⏳</span><span>Saves Time</span>
+        </div>
+        <div class="benefit reveal" style="--delay: 0.1s">
+          <span class="b-icon">💰</span><span>Finds Best Discounts</span>
+        </div>
+        <div class="benefit reveal" style="--delay: 0.2s">
+          <span class="b-icon">🧠</span><span>Smart Shopping</span>
+        </div>
+        <div class="benefit reveal" style="--delay: 0.3s">
+          <span class="b-icon">🚀</span><span>Faster Decisions</span>
+        </div>
+        <div class="benefit reveal" style="--delay: 0.4s">
+          <span class="b-icon">❌</span><span>Avoid Overpaying</span>
+        </div>
+        <div class="benefit reveal" style="--delay: 0.5s">
+          <span class="b-icon">😌</span><span>Saves Effort</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔥 FIRE FEATURED DEALS SECTION -->
+    <section class="featured-deals" id="deals">
+      <div class="fire-banner reveal">
+        <div class="fire-title-wrap">
+          <div class="fire-emoji">🔥</div>
+          <div class="fire-text-block">
+            <p class="fire-label">HOT RIGHT NOW</p>
+            <h2 class="fire-heading">
+              Featured <span class="highlight">Deals</span>
+            </h2>
+            <p class="fire-sub">
+              Hand-picked discounts updated daily — don't miss out!
+            </p>
+          </div>
+          <div class="fire-emoji">🔥</div>
+        </div>
+        <div class="fire-pulse-bar">
+          <div class="fire-pulse-inner"></div>
+        </div>
+      </div>
+
+      <div class="deal-grid">
+        <div class="deal-card reveal" style="--delay: 0s">
+          <div class="deal-badge">53% OFF</div>
+          <img
+            src="https://via.placeholder.com/300x240/e6f9ee/00b050?text=Curtains"
+            alt="Curtains"
+          />
+          <div class="deal-info">
+            <h3>Space Theme Grommet Opaque Curtains – Kids Room</h3>
+            <div class="deal-price">
+              <span class="old-price">₹1799</span>
+              <span class="new-price">₹849</span>
+            </div>
+            <div class="deal-rating">
+              ⭐⭐⭐⭐⭐ <small>(2.3k reviews)</small>
+            </div>
+            <a
+              href="https://www.amazon.in/"
+              class="btn btn-deal"
+              target="_blank"
+              >View Deal <span class="arrow">→</span></a
+            >
+          </div>
+        </div>
+
+        <div class="deal-card reveal hot-deal" style="--delay: 0.15s">
+          <div class="deal-badge hot">83% OFF 🔥</div>
+          <img
+            src="https://m.media-amazon.com/images/I/71ndbdVgC7L._SX679_.jpg"
+            alt="boAt Airdopes"
+          />
+          <div class="deal-info">
+            <h3>boAt Airdopes 300 – True Wireless Earbuds</h3>
+            <div class="deal-price">
+              <span class="old-price">₹6490</span>
+              <span class="new-price">₹1099</span>
+            </div>
+            <div class="deal-rating">
+              ⭐⭐⭐⭐⭐ <small>(18k reviews)</small>
+            </div>
+            <a
+              href="https://www.amazon.in/"
+              class="btn btn-deal hot"
+              target="_blank"
+              >View Deal <span class="arrow">→</span></a
+            >
+          </div>
+        </div>
+
+        <div class="deal-card reveal" style="--delay: 0.3s">
+          <div class="deal-badge">50% OFF</div>
+          <img
+            src="https://via.placeholder.com/300x240/e6f9ee/00b050?text=Study+Desk"
+            alt="Study Desk"
+          />
+          <div class="deal-info">
+            <h3>Engineered Wood Study & Office Desk – 120x60cm</h3>
+            <div class="deal-price">
+              <span class="old-price">₹13000</span>
+              <span class="new-price">₹6499</span>
+            </div>
+            <div class="deal-rating">
+              ⭐⭐⭐⭐⭐ <small>(4.1k reviews)</small>
+            </div>
+            <a
+              href="https://www.amazon.in/"
+              class="btn btn-deal"
+              target="_blank"
+              >View Deal <span class="arrow">→</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTER BANNER -->
+    <section class="counter-band reveal">
+      <div class="counter-item">
+        <span class="counter-emoji">🎯</span>
+        <h2 class="counter-num" data-target="10000">0</h2>
+        <span class="counter-suffix">+</span>
+        <p>Deals Found</p>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="counter-emoji">😊</span>
+        <h2 class="counter-num" data-target="5000">0</h2>
+        <span class="counter-suffix">+</span>
+        <p>Happy Users</p>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="counter-emoji">💸</span>
+        <h2 class="counter-num" data-target="1000000">0</h2>
+        <span class="counter-suffix">+</span>
+        <p>Rupees Saved</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="section-label reveal">Social Proof</div>
+      <h2 class="reveal">What <span class="highlight">Users Say</span></h2>
+      <div class="testimonial-grid">
+        <div class="testimonial reveal" style="--delay: 0s">
+          <div class="t-quote">"</div>
+          <p>
+            Saved me hours comparing products. Found the earbuds at almost no
+            price!
+          </p>
+          <div class="t-footer">
+            <div class="t-avatar">R</div>
+            <div>
+              <strong>Rahul M.</strong><br /><small>Delhi, India</small>
+            </div>
+          </div>
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="testimonial reveal" style="--delay: 0.15s">
+          <div class="t-quote">"</div>
+          <p>
+            Found discounts I couldn't find anywhere else. This site is an
+            absolute gem!
+          </p>
+          <div class="t-footer">
+            <div class="t-avatar" style="background: #f97316">P</div>
+            <div>
+              <strong>Priya S.</strong><br /><small>Mumbai, India</small>
+            </div>
+          </div>
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <div class="testimonial reveal" style="--delay: 0.3s">
+          <div class="t-quote">"</div>
+          <p>
+            Amazing website for finding deals. I check it every morning before
+            buying anything.
+          </p>
+          <div class="t-footer">
+            <div class="t-avatar" style="background: #8b5cf6">A</div>
+            <div>
+              <strong>Arjun K.</strong><br /><small>Bangalore, India</small>
+            </div>
+          </div>
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="profile" id="about">
+      <div class="profile-img-wrap reveal">
+        <div class="profile-glow"></div>
+        <img
+          src="https://copilot.microsoft.com/th/id/BCO.5b440c2b-fc81-41a1-a5ba-b90a0864ce2f.png"
+          alt="Founder"
+        />
+      </div>
+      <div class="profile-content reveal-right">
+        <div class="section-label">Our Story</div>
+        <h2>About <span class="highlight">Profit Pulse</span></h2>
+        <p>
+          Profit Pulse was created to help people save time and money while
+          shopping online. We got tired of spending hours scrolling through
+          pages just to find a decent deal.
+        </p>
+        <p>
+          We compare products, discover discounts, and showcase the best
+          available deals from trusted stores like Amazon and Flipkart — updated
+          every single day.
+        </p>
+        <div class="about-features">
+          <span>✅ No spam</span>
+          <span>✅ No tracking</span>
+          <span>✅ 100% free</span>
+        </div>
+        <a href="#" class="btn btn-primary"
+          >Learn More <span class="arrow">→</span></a
+        >
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter reveal" id="contact">
+      <div class="newsletter-inner">
+        <div class="nl-glow"></div>
+        <h2>📧 Get Daily Deals</h2>
+        <p>Subscribe and never miss a great offer again.</p>
+        <form class="nl-form" onsubmit="handleSubscribe(event)">
+          <input
+            type="email"
+            placeholder="Enter your email address..."
+            required
+          />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="nl-note">
+          No spam. Unsubscribe anytime. We respect your inbox.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">🎉 You're subscribed! Check your inbox.</div>
+
+    <!-- QUOTE BAND -->
+    <section class="quote">
+      <div class="quote-inner reveal">
+        <div class="quote-icon">💡</div>
+        <h2>"Shop Smarter. Save Faster. Spend Less."</h2>
+        <p>— The Profit Pulse Promise</p>
+      </div>
+    </section>
+
+    <!-- JACKPOT -->
+    <section class="jackpot">
+      <img class="reveal" src="ppe.png" alt="Jackpot" />
+      <div class="reveal-right">
+        <div class="section-label">You Made It!</div>
+        <h2>Found <span class="highlight">Profit Pulse?</span></h2>
+        <p>
+          Congratulations 🎉 You just discovered a smarter way to shop. Millions
+          of deals are waiting for you.
+        </p>
+        <a href="#hero" class="btn btn-primary">Start Saving Now →</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-box">
+            <img
+              src="https://copilot.microsoft.com/th/id/BCO.5b440c2b-fc81-41a1-a5ba-b90a0864ce2f.png"
+              alt="Logo"
+            />
+            <span>Profit Pulse</span>
+          </div>
+          <p>
+            Helping shoppers discover the best deals, discounts and offers every
+            day — completely free.
+          </p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Deals</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h3>Top Stores</h3>
+            <a href="#">Amazon</a>
+            <a href="#">Flipkart</a>
+            <a href="#">Myntra</a>
+            <a href="#">Ajio</a>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p>📧 ritsyarabal@gmail.com</p>
+            <p>🌍 India</p>
+            <p>⏰ Daily Updates</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+        <p class="copyright">© 2026 Profit Pulse. All Rights Reserved.</p>
+        <p class="affiliate-disclaimer">
+          ⚠️ Affiliate Disclosure: Some links are affiliate links. We may earn a
+          commission at no extra cost to you.
+        </p>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button
+      class="back-to-top"
+      id="backTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
