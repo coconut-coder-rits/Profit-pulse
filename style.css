@@ -1417,3 +1417,8 @@ hr {
     display: none;
   }
 }
+.lo:hover {
+  color: white;
+  box-shadow: 0 4px 20px var(--green-glow);
+  border: 2px solid #008a3e;
+}
